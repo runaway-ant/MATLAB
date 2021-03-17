@@ -1,0 +1,11 @@
+ch = 'abcdefghijk'
+ch
+subch = ch(1:5);
+subch
+revch = subch(end:-1:1);
+k = find(revch>='a'&revch<='a');
+k
+a(k)= revch(k)-('a'-'A');
+char(a)
+length(k);
+b = revch(end:-1:1)
