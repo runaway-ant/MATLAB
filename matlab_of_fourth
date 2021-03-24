@@ -1,12 +1,12 @@
 M = 100 + magic(5);
-A = vander([1;2;3;4]);
-H = hilb(4);
+A = vander([1;2;3;4])
+H = hilb(4)
 c = [1 2 3 4 5];
 r = [1.5 2.5 3.5 4.5 5.5];
-T = toeplitz(c,r);;
+T = toeplitz(c,r);
 p = [1,0,-7,6];
-A = compan(p);
-eig(A);
-pascal(6);
-pascal(6,1);
-pascal(6,2);
+A = compan(p)
+eig(A)
+pascal(6)
+pascal(6,1)
+pascal(6,2)
