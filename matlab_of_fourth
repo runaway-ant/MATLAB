@@ -10,3 +10,12 @@ eig(A)
 pascal(6)
 pascal(6,1)
 pascal(6,2)
+
+M = 100 + magic(5);
+diag(M)
+triu(M)
+tril(M)
+fliplr(M)
+flipud(M)
+inv(M)
+pinv(A)
