@@ -19,3 +19,7 @@ fliplr(M)
 flipud(M)
 inv(M)
 pinv(A)
+
+A = [1,2,3;1,4,9;1,8,27];
+b = [5,-2,6]';
+x = inv(A)*b
