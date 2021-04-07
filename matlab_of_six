@@ -57,3 +57,16 @@ n=find(p~=0);
 p(n)
 
 for(start, step, end）//默认step为1，可更改
+
+例4-8  已知                                     当n=100时，求y的值。
+程序如下：
+y=0;n=100;
+for i=1:n
+y=y+1/i/i;
+end
+y 
+
+n=100;
+i=1:n;
+f=1./i.^2;
+y=sum(f)
