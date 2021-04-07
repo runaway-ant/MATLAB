@@ -56,3 +56,4 @@ end
 n=find(p~=0);
 p(n)
 
+for(start, step, end）//默认step为1，可更改
