@@ -1,0 +1,51 @@
+例4-15  用筛选法求某自然数范围内的全部素数。
+m=input('m='); 
+p=1:m; p(1)=0;
+for i=2:sqrt(m)
+   for j=2*i:i:m
+      p(j)=0;
+   end
+end
+n=find(p~=0);
+p(n)
+
+例4-11  从键盘输入若干个数，当输入0时结束输入，求这些数的平均值和它们之和。
+程序如下：
+sum=0;
+n=0;
+val=input('Enter a number (end in 0):');
+while (val~=0)
+     sum=sum+val;
+     n=n+1;
+     val=input('Enter a number (end in 0):');
+end
+if (n > 0)
+    sum
+    mean=sum/n
+end
+
+例4-12  根据矩阵指数的幂级数展开式求矩阵指数。
+程序如下：
+X=input('Enter X:');
+E=zeros(size(X));
+F=eye(size(X));
+n=1;
+while norm(F,1)>0
+   E=E+F;
+   F=F*X/n;
+   n=n+1;
+end
+E
+expm(X) 
+
+例4-15  用筛选法求某自然数范围内的全部素数。
+m=input('m='); 
+p=1:m; p(1)=0;
+for i=2:sqrt(m)
+   for j=2*i:i:m
+      p(j)=0;
+   end
+end
+n=find(p~=0);
+p(n)
+
