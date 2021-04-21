@@ -28,4 +28,18 @@ A=[1 2 3;
     x1=(0:12)/2;
     y3=2*exp(-0.5*x1).*sin(2*pi*x1);
     plot(x,y1,'g:',x,y2,'b--',x1,y3,'rp');
+    
+例5-7  在一个图形窗口中以子图形式同时绘制正弦、余弦、正切、余切曲线。
+   x=linspace(0,2*pi,60);
+    y=sin(x);z=cos(x);
+    t=sin(x)./(cos(x)+eps); ct=cos(x)./(sin(x)+eps);
+    subplot(2,2,1);     
+    plot(x,y);title('sin(x)');axis ([0,2*pi,-1,1]);            
+    subplot(2,2,2);
+    plot(x,z);title('cos(x)');axis ([0,2*pi,-1,1]);
+    subplot(2,2,3);
+    plot(x,t);title('tangent(x)');axis ([0,2*pi,-40,40]);
+    subplot(2,2,4);
+    plot(x,ct);title('cotangent(x)');axis ([0,2*pi,-40,40]);
+
 
