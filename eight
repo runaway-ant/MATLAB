@@ -42,4 +42,50 @@ A=[1 2 3;
     subplot(2,2,4);
     plot(x,ct);title('cotangent(x)');axis ([0,2*pi,-40,40]);
 
+例5-6  用图形保持功能在同一坐标内绘制曲线y=2e-0.5xsin(2πx)及其包络线。
+x=(0:pi/100:2*pi)';
+y1=2*exp(-0.5*x)*[1,-1];
+y2=2*exp(-0.5*x).*sin(2*pi*x);
+plot(x,y1,'b:');
+axis([0,2*pi,-2,2]);        %设置坐标
+hold on;        %设置图形保持状态
+plot(x,y2,'k');
+legend('包络线','包络线','曲线y');       %加图例
+hold off;        %关闭图形保持
+grid              %网格线控制
+
+
+例5-5  绘制分段函数曲线并添加图形标注
+x=linspace(0,10,100);
+y=[];
+for x0=x
+   if x0>=8
+      y=[y,1];
+   elseif x0>=6
+      y=[y,5-x0/2];
+   elseif x0>=4
+      y=[y,2];
+   elseif x0>=0
+      y=[y,sqrt(x0)];
+   end
+end
+
+plot(x,y)
+axis([0 10 0 2.5])            %设置坐标轴
+title('分段函数曲线');          %加图形标题
+xlabel('Variable X');         %加X轴说明
+ylabel('Variable Y');         %加Y轴说明
+text(2,1.3,'y=x^{1/2}');      %在指定位置添加图形说明
+text(4.5,1.9,'y=2');
+text(7.3,1.5,'y=5-x/2');
+text(8.5,0.9,'y=1');
+
+例5-4  用不同标度在同一坐标内绘制曲线
+y1=e-0.5xsin(2πx)及曲线y2=sin(x)。
+    程序如下：
+    x1=0:pi/100:2*pi;
+    x2=0:pi/100:3*pi;
+    y1=exp(-0.5*x1).*sin(2*pi*x1);
+    y2= sin(x2);
+    plotyy(x1,y1,x2,y2);
 
