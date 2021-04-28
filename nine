@@ -24,3 +24,13 @@ subplot(2,2,4);
 loglog(x,y);title('loglog(x,y)');grid on;
 
 fplot(@(x)cos(tan(pi*x)),[0,1])
+
+x=0:0.1:2*pi;[x,y]=meshgrid(x);z=sin(y).*cos(x);
+mesh(x,y,z);xlabel('x-axis'),ylabel('y-axis'),zlabel('z-axis');title('mesh')
+
+
+x=0:0.1:2*pi;[x,y]=meshgrid(x);z=sin(y).*cos(x);
+surf(x,y,z);xlabel('x-axis'),ylabel('y-axis'),zlabel('z-axis');title('surf')
+
+x=0:0.1:2*pi;[x,y]=meshgrid(x);z=sin(y).*cos(x);
+plot3(x,y,z);xlabel('x-axis'),ylabel('y-axis'),zlabel('z-axis');title('plot3-1')
