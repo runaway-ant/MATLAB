@@ -3,7 +3,7 @@ r1 = exp(cos(t))-2*cos(4*t)+sin(t/12).^5;
 r2 = exp(cos(t-pi/2))-2*cos(4*(t-pi/2))+sin((t-pi/2)/12).^5;
 r4 = exp(cos(t-3*pi/2))-2*cos(4*(t-3*pi/2))+sin((t-3*pi/2)/12).^5;
 r3 = exp(cos(t-pi))-2*cos(4*(t-pi))+sin((t-pi)/12).^5;
-subplot(2,2,1)
+subplot(2,2,1)               %两行两列第1个位置（左上角），总共2*2=4个位置
 polar(t,r1)
 subplot(2,2,2)
 polar(t,r2)
