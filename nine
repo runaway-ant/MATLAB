@@ -1,0 +1,26 @@
+t=0:pi/50:20*pi;
+r1 = exp(cos(t))-2*cos(4*t)+sin(t/12).^5;
+r2 = exp(cos(t-pi/2))-2*cos(4*(t-pi/2))+sin((t-pi/2)/12).^5;
+r4 = exp(cos(t-3*pi/2))-2*cos(4*(t-3*pi/2))+sin((t-3*pi/2)/12).^5;
+r3 = exp(cos(t-pi))-2*cos(4*(t-pi))+sin((t-pi)/12).^5;
+subplot(2,2,1)
+polar(t,r1)
+subplot(2,2,2)
+polar(t,r2)
+subplot(2,2,4)
+polar(t,r4)
+subplot(2,2,3)
+polar(t,r3)
+
+x = 0:0.1:10;
+y=10*x.*x;
+subplot(2,2,1);
+plot(x,y);title('plot(x,y)');grid on;
+subplot(2,2,2);
+semilogx(x,y);title('semilogx(x,y)');grid on;
+subplot(2,2,3);
+semilogx(x,y);title('semilogy(x,y)');grid on;
+subplot(2,2,4);
+loglog(x,y);title('loglog(x,y)');grid on;
+
+fplot(@(x)cos(tan(pi*x)),[0,1])
